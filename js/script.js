@@ -13,19 +13,20 @@ const kmPrice = 0.21;
     //prezzo biglietto = 0,21 €/ km
 
 let ticketPrice = kmPrice * distanceToDo ;
-console.log(ticketPrice);
+let ticketPrices = ticketPrice.toFixed(2)
+console.log(ticketPrices);
 
     //sconto del 20% se ha meno di 18 anni
 
 if (userAge < 18){
     discountPrice = (ticketPrice / 100) * 80;
-    let discountPrices = +discountPrice.toFixed(2); 
-} 
-else if (userAge > 65) {
+}else if (userAge > 65) {
    discountPrice = ( ticketPrice / 100) * 60;
-   let discountPrices = +discountPrice.toFixed(2); 
-}
-else {}
-// console.log (discountPrices);
+   
+}else {}
+
+let discountPrices = +discountPrice.toFixed(2); 
+console.log (discountPrices);
     //sconto del 40% se ha più di 65 anni
 //OUTPUT stampare con log e poi eventualmente da elaborare in pagina
+document.getElementById("mio_id").innerHTML = discountPrice
