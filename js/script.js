@@ -19,10 +19,13 @@ console.log(ticketPrice);
 
 if (userAge < 18){
     discountPrice = (ticketPrice / 100) * 80;
+    let discountPrices = +discountPrice.toFixed(2); 
 } 
 else if (userAge > 65) {
    discountPrice = ( ticketPrice / 100) * 60;
+   let discountPrices = +discountPrice.toFixed(2); 
 }
-console.log (discountPrice)
+else {}
+// console.log (discountPrices);
     //sconto del 40% se ha più di 65 anni
 //OUTPUT stampare con log e poi eventualmente da elaborare in pagina
